@@ -6,7 +6,7 @@
 
 [Projects Site](https://react-projects.netlify.app/)
 
-## Corresponding Tutorial Topics
+## Corresponding Tutorial Topics Course
 
 #### useState
 
@@ -44,7 +44,7 @@
 
 15. Cocktails
 
-## Advanced Projects (Course Exclusive)
+## Advanced Projects
 
 [Course Link](https://www.udemy.com/course/react-tutorial-and-projects-course/?couponCode=REACT-OCT)
 
