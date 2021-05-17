@@ -3,20 +3,21 @@ import { useFetch } from "./useFetch";
 
 function App() {
   const [count, setCount] = useState(0);
+  const [paragraphs, setParagraphs] = useState(0);
 
-  const url = `https://baconipsum.com/api/?type=meat-and-filler&paras=${count}`;
+  const url = `https://baconipsum.com/api/?type=meat-and-filler&paras=${paragraphs}`;
   const { loremIpsum, isLoading } = useFetch(url);
 
   const handleSubmit = (e) => {
     e.preventDefault();
     let amount = parseInt(count);
     if (count <= 0) {
-      amount = 1;
+      amount = 0;
     }
     if (count > 30) {
       amount = 30;
     }
-    setCount(amount);
+    setParagraphs(amount);
   };
 
   if (isLoading) {
