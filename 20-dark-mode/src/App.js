@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from 'react';
-import data from './data';
-import Article from './Article';
+import React, { useState, useEffect } from "react";
+import data from "./data";
+import Article from "./Article";
 
 const getStorageTheme = () => {
-  let theme = 'light-theme';
-  if (localStorage.getItem('theme')) {
-    theme = localStorage.getItem('theme');
+  let theme = "light-theme";
+  if (localStorage.getItem("theme")) {
+    theme = localStorage.getItem("theme");
   }
   return theme;
 };
@@ -13,24 +13,21 @@ const getStorageTheme = () => {
 function App() {
   const [theme, setTheme] = useState(getStorageTheme());
 
-  const toggleTheme = () => {
-    if (theme === 'light-theme') {
-      setTheme('dark-theme');
-    } else {
-      setTheme('light-theme');
-    }
+  const handleTheme = () => {
+    theme === "light-theme" ? setTheme("dark-theme") : setTheme("light-theme");
   };
 
   useEffect(() => {
     document.documentElement.className = theme;
-    localStorage.setItem('theme', theme);
+    localStorage.setItem("theme", theme);
   }, [theme]);
+
   return (
     <main>
       <nav>
         <div className="nav-center">
-          <h1>overreacted</h1>
-          <button className="btn" onClick={toggleTheme}>
+          <h1>overreact</h1>
+          <button className="btn" onClick={handleTheme}>
             toggle
           </button>
         </div>
